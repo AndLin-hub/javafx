@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"  fx:controller="controller.RecordController" alignment="center" spacing="10">
+    <HBox spacing="10" alignment="center" >
+        <Label text="Patron ID:"/>
+        <TextField fx:id="patronTf"/>
+        <Button text="Show Record" onAction="#handleRecord" disable="true" fx:id="recordBtn"/>
+    </HBox>
+    <Text text="No Patron Selected" fx:id="recordT"/>
+    <Label text="Currently Borrowed Books:"/>
+    <ListView fx:id="currentlyLv" prefHeight="100"/>
+    <Label text="Borrowing History:"/>
+    <ListView fx:id="historyLv" prefHeight="100"/>
+    <Button text="Close" onAction="#handleExit"/>
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

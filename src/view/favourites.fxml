@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"  fx:controller="controller.FavouritesController" alignment="center"
+        spacing="10">
+   <HBox spacing="10">
+    <Label text="Patron ID:"/>
+    <TextField fx:id="PatronTf"/>
+    <Button text="Show Favourites" onAction="#handleFavourites" disable="true" fx:id="favouriteBtn"/>
+   </HBox>
+   <Text text="No Patron Selected" fx:id="favouriteT" />
+   <ListView prefHeight="100" prefWidth="250" fx:id="favouritesLv"/>
+   <Button text="Close" onAction="#handleExit"/>
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
